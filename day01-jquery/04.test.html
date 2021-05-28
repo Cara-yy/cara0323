@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Title</title>
+</head>
+
+<body>
+  <div id="box">
+    <ul>
+      <li>我是li元素1</li>
+      <li>我是li元素2</li>
+      <li>我是li元素3</li>
+      <li>我是li元素4</li>
+      <li>我是li元素5</li>
+      <li>我是li元素6</li>
+      <li>我是li元素7</li>
+      <li>我是li元素8</li>
+    </ul>
+  </div>
+  <script>
+    //webapi
+    // var lis = document.getElementsByTagName('li')
+    // for (var i = 0; i < lis.length; i++) {
+    //   lis[i].onmouseenter = function () {
+    //     for (var i = 0; i < lis.length; i++) {
+    //       lis[i].style.backgroundColor = ''
+    //     }
+    //     this.style.backgroundColor = 'pink'
+    //   }
+    // }
+  </script>
+  <script src="jquery-1.12.4.js"></script>
+  <script>
+    $('li').mouseenter(function () {
+      $(this).css('background', 'pink').siblings().css('background', '');
+    })
+  </script>
+</body>
+
+</html>
